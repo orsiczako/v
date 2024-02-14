@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Leszel a valentinom vagy mi?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/wHUWuJWg6iRRQWTBd1/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Igen</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">Nem</button>
+            <script>
+                function nextPage() {
+                    window.location.href = "igen.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+    
+    <div class="github-link" style="position: fixed; bottom: 10px; left: 10px;">
+        <a href="https://github.com/orsiczako/v" target="_blank" style="font-size: 18px; color: darkmagenta;">Link a forráskódhoz</a>
+    </div>
+</body>
+</html>
+
